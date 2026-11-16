@@ -1,0 +1,92 @@
+{
+  "expo": {
+    "name": "ResiFlow",
+    "slug": "ResiFlow",
+    "version": "4.6.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/systemmanager_sinfondo.png",
+    "scheme": "resiflow",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/systemmanager_sinfondo.png",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "ResiFlow necesita acceso al micrófono para que envíes notas de voz al asistente inteligente.",
+        "NSPhotoLibraryUsageDescription": "ResiFlow necesita acceso a tus fotos para que subas comprobantes de pago y vouchers.",
+        "NSCameraUsageDescription": "ResiFlow necesita acceso a la cámara para tomar fotos de recibos o averías."
+      }
+    },
+    "android": {
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK",
+        "VIBRATE",
+        "RECORD_AUDIO",
+        "READ_MEDIA_IMAGES",
+        "CAMERA"
+      ],
+      "package": "com.jrdev.ResiFlow",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/images/Logo_ResiFlow.png",
+        "monochromeImage": "./assets/images/Logo_ResiFlow.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/systemmanager_sinfondo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#121212",
+          "image": "./assets/images/systemmanager_sinfondo.png",
+          "imageWidth": 180,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/systemmanager_sinfondo.png",
+          "color": "#00BCD4",
+          "defaultChannel": "ResiFlow_Max_Channel"
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "ResiFlow necesita tu micrófono para guardar los comandos de voz del asistente."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ResiFlow necesita acceso a tus fotos para escanear recibos y vouchers con IA.",
+          "cameraPermission": "ResiFlow necesita acceso a tu cámara para capturar comprobantes de pago."
+        }
+      ],
+      "expo-sharing",
+      "expo-image",
+      "expo-web-browser",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "b05bb0a8-2ac2-4c73-a07e-b929289fee5b"
+      }
+    },
+    "owner": "juanrijodev"
+  }
+}
